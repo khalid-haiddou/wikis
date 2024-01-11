@@ -7,9 +7,23 @@
 
     <!-- Add Bootstrap CSS link -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .register-container {
+            max-width: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5 register-container">
         <h2 class="text-center">Register</h2>
         <form method="post" action="?action=register">
 
@@ -28,10 +42,10 @@
                 <input type="password" class="form-control" name="password" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
 
             <!-- Add a button to go to the login page -->
-            <a href="?action=login" class="btn btn-link">J'ai déjà un compte</a>
+            <a href="?action=login" class="btn btn-link btn-block">J'ai déjà un compte</a>
         </form>
     </div>
 

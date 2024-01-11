@@ -1,5 +1,9 @@
 <?php
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 class AuthController {
     private $db;
 
@@ -62,6 +66,16 @@ class AuthController {
 
         // Load the login view
         include '../views/login.php';
+    }
+
+    public function logout() {
+        // Unset or destroy session variablesrez
+        $_SESSION = [];
+        session_destroy();
+
+        // Redirect to the login page after logout
+        header("Location: index.php?action=login");
+        exit();
     }
 }
 

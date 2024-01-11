@@ -13,6 +13,9 @@ switch ($action) {
     case 'login':
         $authController->login();
         break;
+    case 'logout':
+        $authController->logout();
+        break;
     default:
         echo "Invalid action";
         break;
