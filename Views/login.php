@@ -25,7 +25,7 @@
 <body>
     <div class="container mt-5 login-container">
         <h2 class="text-center">Login</h2>
-        <form method="post" action="?action=login">
+        <form method="post" action="../public/index.php?action=login">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" name="email" required>

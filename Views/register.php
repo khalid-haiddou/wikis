@@ -25,7 +25,7 @@
 <body>
     <div class="container mt-5 register-container">
         <h2 class="text-center">Register</h2>
-        <form method="post" action="?action=register">
+        <form method="post" action="../public/index.php?action=register">
 
             <div class="form-group">
                 <label for="username">Username:</label>

@@ -65,97 +65,66 @@
         </div>
 
         <!-- ========================= Main ==================== -->
-        <div class="main">
-            <div class="topbar">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
+        
+        <div class="container mr-2">
+        <h1>Create New Wiki</h1>
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
+    <form action="process_form.php" method="post" enctype="multipart/form-data">
+        
+        <div class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
 
-                <div class="user">
-                    <img src=".././/assets/imgs/customer01.jpg" alt="">
-                </div>
+        
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <input type="text" class="form-control" id="description" name="description" required>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="content">Content:</label>
+            <textarea class="form-control" id="content" name="content" rows="4" required></textarea>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select class="form-control" id="category" name="category" required>
+              
+                <option value="1">Category 1</option>
+                <option value="2">Category 2</option>
+               
+            </select>
+        </div>
+
+        
+        <div class="form-group">
+            <label>Tags:</label><br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="tag1" name="tags[]" value="1">
+                <label class="form-check-label" for="tag1">Tag 1</label>
             </div>
-
-            
-            <div class="container mt-5">
-        <h1>Create a New Wiki</h1>
-
-        <!-- Your HTML form for creating a wiki -->
-        <form method="post" action="?action=createWiki" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="title">Title:</label>
-                <input type="text" class="form-control" name="title" required>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="tag2" name="tags[]" value="2">
+                <label class="form-check-label" for="tag2">Tag 2</label>
             </div>
+           
+        </div>
 
-            <div class="form-group">
-                <label for="description">Description:</label>
-                <textarea class="form-control" name="description" rows="3" required></textarea>
-            </div>
+        <!-- Image Upload -->
+        <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" class="form-control-file" id="image" name="image">
+        </div>
 
-            <div class="form-group">
-                <label for="creation_date">Creation Date:</label>
-                <input type="date" class="form-control" name="creation_date" required>
-            </div>
-
-            <div class="form-group">
-                <label for="thumbnail">Thumbnail (Image):</label>
-                <input type="file" class="form-control" name="thumbnail" accept="image/*" required>
-            </div>
-
-            <div class="form-group">
-                <label for="category">Select a Category:</label>
-                <select class="form-control" name="category" required>
-                    <option value="1">Technology</option>
-                    <option value="2">Science</option>
-                    <option value="3">Art</option>
-                    <!-- Add more categories as needed -->
-                </select>
-            </div>
-
-            <!-- Display selected tags dynamically -->
-            <div class="form-group">
-                <label for="selectedTags">Selected Tags:</label>
-                <div id="selectedTags"></div>
-            </div>
-
-            <!-- Dropdown for selecting tags -->
-            <div class="form-group">
-                <label for="tags">Select Tags (up to 5):</label>
-                <select class="form-control selectpicker" name="tags[]" data-live-search="true" multiple required>
-                    <option value="1">Programming</option>
-                    <option value="2">Web Development</option>
-                    <option value="3">Space</option>
-                    <option value="4">Painting</option>
-                    <option value="5">Travel</option>
-                    <option value="6">Health</option>
-                    <option value="7">Music</option>
-                    <option value="8">Food</option>
-                    <option value="9">Sports</option>
-                    <option value="10">Fashion</option>
-                    <!-- Add more tags as needed -->
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Create Wiki</button>
-        </form>
-        <div style="margin-top: 40px;"></div>
-    
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Create Wiki</button>
+    </form>
+</div>
     <!-- Bootstrap Select JS (requires Bootstrap JS) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
-
-   
-
-
-
-
-
     <!-- =========== Scripts =========  -->
     <script src="assets/js/main.js"></script>
 
