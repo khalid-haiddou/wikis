@@ -12,8 +12,8 @@ CREATE TABLE users (
 
 -- Create Categories Table
 CREATE TABLE categories (
-    id INT PRIMARY KEY,
-    nom VARCHAR(100)
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100)
 );
 
 -- Create Wiki Table
@@ -33,7 +33,7 @@ CREATE TABLE wiki (
 -- Create Tags Table
 CREATE TABLE tags (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100)
+    name VARCHAR(100)
 );
 
 -- Create Many-to-Many Relationship Table between Wiki and Tags

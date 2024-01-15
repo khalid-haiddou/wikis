@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost/WIKIS/public/index.php?action=showTags">
+                    <a href="">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -85,83 +85,24 @@
         </div>
 
         <!-- ========================= Main ==================== -->
-        <div class="main">
-            <div class="topbar">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
+        <div class="container mr-2">
+        <h1 class="mb-4">Add New Tag</h1>
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-
-                <div class="user">
-                    <img src="../assets/imgs/customer01.jpg" alt="">
-                </div>
+        <!-- Form to add a new tag -->
+        <form method="post" action="../public/index.php?action=addTag">
+            <div class="form-group">
+                <label for="name">Tag Name:</label>
+                <input type="text" class="form-control" name="name" required>
             </div>
 
-            
+            <button type="submit" class="btn btn-primary">Add Tag</button>
+        </form>
+    </div>
 
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Statistics</h1>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-users"></i> Admins</h5>
-              <p class="card-text">1</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-chart-line"></i> Total Authors </h5>
-              <p class="card-text">10</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-eye"></i> Total Categories </h5>
-              <p class="card-text">10</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-shopping-cart"></i> Total Posts </h5>
-              <p class="card-text">3</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-chart-bar"></i> Total Users </h5>
-              <p class="card-text">5</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-comments"></i> Total TAgs </h5>
-              <p class="card-text">10</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </main>
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
             
     
     <!-- Bootstrap Select JS (requires Bootstrap JS) -->
