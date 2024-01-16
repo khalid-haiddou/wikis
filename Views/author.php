@@ -38,11 +38,11 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="http://localhost:8000/?action=addwikipage">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">authors</span>
+                        <span class="title">Add WIKIS</span>
                     </a>
                 </li>
 
@@ -65,7 +65,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="http://localhost:8000/?action=showwikis">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>

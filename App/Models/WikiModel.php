@@ -14,6 +14,17 @@ class WikiModel {
 
         return $stmt->rowCount();
     }
+    public function getAllWikis() {
+        $conn = $this->db->getConnection();
 
-    // Other methods in the model...
+        $stmt = $conn->prepare(
+            "SELECT w.*, u.username as author, c.name as category FROM wiki w 
+            LEFT JOIN users u ON w.authorID = u.id
+            LEFT JOIN categories c ON w.categorieID = c.id"
+            );
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }

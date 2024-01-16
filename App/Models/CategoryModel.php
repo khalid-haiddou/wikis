@@ -57,4 +57,6 @@ class CategoryModel {
         return $stmt->rowCount(); // Number of affected rows
     }
 }
+
 ?>
+

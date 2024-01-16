@@ -57,24 +57,24 @@ class TagController {
     }
 
     public function deleteTag($tagId) {
-        // Check if the tagId is provided
-        if ($tagId !== null) {
-            // Delete the tag by ID
-            $result = $this->tagModel->deleteTag($tagId);
-    
-            if ($result > 0) {
-                // Tag deleted successfully
-                header("Location: ../public/index.php?action=showTags");
-                exit();
-            } else {
-                // Handle failure, display an error message or redirect to an error page
-                echo "Failed to delete the tag.";
-            }
+    // Check if the tagId is provided
+    if ($tagId !== null) {
+        // Delete the tag by ID
+        $result = $this->tagModel->deleteTag($tagId);
+
+        if ($result > 0) {
+            // Tag deleted successfully
+            header("Location: ../public/index.php?action=showTags");
+            exit();
         } else {
-            // Handle the case when tagId is not provided
-            echo "Tag ID is missing";
+            // Handle failure, display an error message or redirect to an error page
+            echo "Failed to delete the tag.";
         }
+    } else {
+        // Handle the case when tagId is not provided
+        echo "Tag ID is missing";
     }
+}
     
 }
 ?>

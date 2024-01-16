@@ -1,4 +1,6 @@
 <?php
+require_once '../App/models/CategoryModel.php';
+require_once '../App/models/WikiModel.php';
 
 class WikiController {
     private $wikiModel;
@@ -7,12 +9,13 @@ class WikiController {
     public function __construct() {
         $this->wikiModel = new WikiModel();
         $this->categoryModel = new CategoryModel();
+        $this -> tagModel = new TagModel();
     }
 
     public function showAddWikiForm() {
         // Fetch categories from the model
         $categories = $this->categoryModel->getAllCategories();
-
+        $tags = $this -> tagModel ->getAllTags();
         // Load the view to add a new wiki with categories
         include '../views/add_wiki.php';
     }
@@ -37,5 +40,13 @@ class WikiController {
         }
     }
 
+    public function showWikis() {
+        // Fetch wikis from the model
+        $wikis = $this->wikiModel->getAllWikis();
+        
+        // Load the view to display wikis in a table
+        include '../views/wikis.php';
+    }
+    // Other methods in the model..
     // Other methods in the controller...
 }

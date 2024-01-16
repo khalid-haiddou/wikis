@@ -13,6 +13,8 @@ $authController = new AuthController();
 $CategoryController = new CategoryController();
 $updateCategoryController = new UpdateCategoryController();
 $tagController = new TagController();
+$wikiController = new wikiController();
+
 switch ($action) {
     case 'register':
         $authController->register();
@@ -43,7 +45,10 @@ switch ($action) {
         break;  
     case 'showTags':
         $tagController->showTags();
-        break;  
+        break;
+    case 'addwikipage':
+        $wikiController->showAddWikiForm();
+        break;
     case 'showUpdateTagForm':
         $tagController->showUpdateTagForm($_GET['tagId']);
         break;
@@ -53,9 +58,12 @@ switch ($action) {
     case 'deleteTag':
         $tagController->deleteTag($_GET['tagId']);
         break;   
-    case 'addWiki':
-        $wikiController->addWiki();
-        break;                                                                                                                                       
+    case 'addwiki':
+        $wikiController->addwiki();
+        break;  
+    case 'showwikis':
+        $wikiController->showWikis();
+        break;                                                                                                                                     
     default:
         echo "Invalid action";
         break;

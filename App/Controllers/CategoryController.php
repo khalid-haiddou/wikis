@@ -31,7 +31,6 @@ class CategoryController {
         // Retrieve all categories
         $categories = $this->categoryModel->getAllCategories();
 
-        // Load the view to display all categories
         include '../views/categories.php';
     }
 
