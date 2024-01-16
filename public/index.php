@@ -6,7 +6,7 @@ require_once  '../App/Controllers/CategoryController.php';
 require_once  '../App/Controllers/UpdateCategoryController.php';
 require_once  '../App/Controllers/TagController.php';
 require_once  '../App/Controllers/WikiController.php';
-
+require_once '../App/Controllers/homeController.php';
 
 $action = isset($_GET['action']) ? $_GET['action'] : 'login';
 $authController = new AuthController();
@@ -14,8 +14,12 @@ $CategoryController = new CategoryController();
 $updateCategoryController = new UpdateCategoryController();
 $tagController = new TagController();
 $wikiController = new wikiController();
+$homeController = new homeController();
 
 switch ($action) {
+    case 'home':
+        $homeController->home();
+        break;
     case 'register':
         $authController->register();
         break;

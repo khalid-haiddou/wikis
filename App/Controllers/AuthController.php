@@ -22,7 +22,7 @@ class AuthController {
             $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
             $stmt->execute([$username, $email, $password]);
 
-            header("Location: index.php?action=login");
+            header("Location: ../../public/login");
             exit();
         }
 
@@ -49,7 +49,7 @@ class AuthController {
 
                 // Redirect based on the user's role
                 if ($user['Role'] == 'admin') {
-                    header("Location: ../Views/dashboard.php");
+                    header("Location: ../../Views/dashboard.php");
                     exit();
                 } elseif ($user['Role'] == 'author') {
                     header("Location: ../Views/author.php");

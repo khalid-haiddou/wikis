@@ -19,15 +19,15 @@
   <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../assets/assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../assets/assets1/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/assets1/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/assets1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/assets1/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/assets1/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/assets1/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/assets1/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS Files -->
-  <link href="../assets/assets1/css/variables.css" rel="stylesheet">
-  <link href="../assets/assets1/css/main.css" rel="stylesheet">
+  <link href="assets/assets1/css/variables.css" rel="stylesheet">
+  <link href="assets/assets1/css/main.css" rel="stylesheet">
 
 
 
@@ -159,22 +159,23 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
+<?php foreach($getwikis as $wiki){ ?>
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
               <a href="single-post.html"><img src="../assets/assets1/img/khalidsc.webp" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">&bullet;</span> <span>Jul 5th '22</span></div>
-              <h2><a href="single-post.html">11 Work From Home Part-Time</a></h2>
-              <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
+              <div class="post-meta"><span class="date"><?php echo $wiki['category']; ?></span> <span class="mx-1">&bullet;</span> <span><?php echo $wiki['creationDate']; ?></span></div>
+              <h2><a href="single-post.html"><?php echo $wiki['title']; ?></a></h2>
+              <p class="mb-4 d-block"><?php echo $wiki['description']; ?></p>
 
               <div class="d-flex align-items-center author">
-                <div class="photo"><img src="../assets/assets1/img/person-1.jpg" alt="" class="img-fluid"></div>
                 <div class="name">
-                  <h3 class="m-0 p-0">Cameron Williamson</h3>
+                  <h3 class="m-0 p-0"><?php echo $wiki['author']; ?></h3>
                 </div>
               </div>
             </div>
 
           </div>
+          <?php } ?>
 
           <div class="col-lg-8">
             <div class="row g-5">

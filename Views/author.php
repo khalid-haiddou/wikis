@@ -56,11 +56,11 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="http://localhost:8000/?action=showwikis">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
-                        <span class="title">categories</span>
+                        <span class="title">All Wikis</span>
                     </a>
                 </li>
 
