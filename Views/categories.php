@@ -78,6 +78,7 @@
         <!-- ========================= Main ==================== -->
         <div class="container mr-2">
     <h1 class="text-primary">All Categories</h1>
+    <a href="../Views/add_category.php" class="btn btn-primary">Add New</a>
     <table class="table table-bordered table-hover table-striped">
         <thead class="bg-primary text-white">
             <tr>

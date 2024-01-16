@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                    <a href="">
+                    <a href="http://localhost/WIKIS/public/index.php?action=showTags">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>

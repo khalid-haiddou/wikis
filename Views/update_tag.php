@@ -77,18 +77,18 @@
 
         <!-- ========================= Main ==================== -->
         <div class="container mr-2">
-        <h1>Update Tag</h1>
+    <h1>Update Tag</h1>
 
-        <!-- Form for updating a category -->
-        <form method="post" action="../public/index.php?action=updateTag&tagId=<?php echo $tag['id']; ?>">
-            <div class="mb-3">
-                <label for="name" class="form-label">Tag Name:</label>
-                <input type="text" class="form-control" name="name" value="<?php echo $tag['name']; ?>" required>
-            </div>
+    <!-- Form for updating a tag -->
+    <form method="post" action="../public/index.php?action=updateTag&tagId=<?php echo $tag['id']; ?>">
+        <div class="mb-3">
+            <label for="name" class="form-label">Tag Name:</label>
+            <input type="text" class="form-control" name="name" value="<?php echo $tag['name']; ?>" required>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Update Tag</button>
-        </form>
-    </div>
+        <button type="submit" class="btn btn-primary">Update Tag</button>
+    </form>
+</div>
 
             
     

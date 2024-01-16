@@ -1,10 +1,11 @@
 <?php
 
 require_once '../App/models/Database.php';
-require_once '../App/controllers/AuthController.php';
-require_once  '../App/controllers/CategoryController.php';
-require_once  '../App/controllers/UpdateCategoryController.php';
-require_once  '../App/controllers/TagController.php';
+require_once '../App/Controllers/AuthController.php';
+require_once  '../App/Controllers/CategoryController.php';
+require_once  '../App/Controllers/UpdateCategoryController.php';
+require_once  '../App/Controllers/TagController.php';
+require_once  '../App/Controllers/WikiController.php';
 
 
 $action = isset($_GET['action']) ? $_GET['action'] : 'login';
@@ -42,7 +43,19 @@ switch ($action) {
         break;  
     case 'showTags':
         $tagController->showTags();
-        break;                                                                                                                                                
+        break;  
+    case 'showUpdateTagForm':
+        $tagController->showUpdateTagForm($_GET['tagId']);
+        break;
+    case 'updateTag':
+        $tagController->updateTag($_GET['tagId']);
+        break;    
+    case 'deleteTag':
+        $tagController->deleteTag($_GET['tagId']);
+        break;   
+    case 'addWiki':
+        $wikiController->addWiki();
+        break;                                                                                                                                       
     default:
         echo "Invalid action";
         break;

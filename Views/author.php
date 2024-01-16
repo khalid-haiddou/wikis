@@ -8,11 +8,15 @@
     <title>wiki-s</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Select CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 
 <body>
     <!-- =============== Navigation ================ -->
-    <div class="container">
+   
         <div class="navigation">
             <ul>
                 <li>
@@ -25,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="author.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,11 +38,29 @@
                 </li>
 
                 <li>
-                    <a href="addWiki.php">
+                    <a href="#">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Add Posts</span>
+                        <span class="title">authors</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
+                        <span class="title">Tags</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">
+                        <span class="icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
+                        <span class="title">categories</span>
                     </a>
                 </li>
 
@@ -47,9 +69,10 @@
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
-                        <span class="title">View Posts</span>
+                        <span class="title">Last posts</span>
                     </a>
                 </li>
+
                 <li>
                     <a href="../public/index.php?action=logout">
                         <span class="icon">
@@ -62,37 +85,16 @@
         </div>
 
         <!-- ========================= Main ==================== -->
-        <div class="main">
-            <div class="topbar">
-                <div class="toggle">
-                    <ion-icon name="menu-outline"></ion-icon>
-                </div>
+        
+            
+    
+    <!-- Bootstrap Select JS (requires Bootstrap JS) -->
+    
 
-                <div class="search">
-                    <label>
-                        <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-
-                <div class="user">
-                    <img src=".././/assets/imgs/customer01.jpg" alt="">
-                </div>
-            </div>
-
-            <!-- ======================= Cards ================== -->
-            <div class="cardBox">
-                 
-            </div>
-
-            <!-- ================ Order Details List ================= -->
-            <div class="details">
-                hello i'm khalid gaws go ahead 
-                </div>
-            </div>
-        </div>
-    </div>
-
+   <!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- =========== Scripts =========  -->
     <script src="assets/js/main.js"></script>
 

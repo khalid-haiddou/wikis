@@ -29,7 +29,8 @@ CREATE TABLE wiki (
     FOREIGN KEY (authorID) REFERENCES users(id),
     FOREIGN KEY (categorieID) REFERENCES categories(id)
 );
-
+ALTER TABLE wiki
+ADD COLUMN status BOOL DEFAULT true;
 -- Create Tags Table
 CREATE TABLE tags (
     id INT AUTO_INCREMENT PRIMARY KEY,

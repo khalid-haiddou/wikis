@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="dashboard.php">
+                    <a href="../Views/dashboard.php">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -88,6 +88,7 @@
 
         <div class="container mr-2">
     <h1 class="text-primary">All Tags</h1>
+    <a href="../Views/add_tag.php" class="btn btn-primary">Add New</a>
     <table class="table table-bordered table-hover table-striped">
         <thead class="bg-primary text-white">
             <tr>
