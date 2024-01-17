@@ -11,7 +11,6 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <style>
         body {
             padding: 20px;
@@ -23,7 +22,7 @@
 <div class="container">
     <h1 class="mt-4 mb-4">Add New Wiki</h1>
 
-    <form method="post" action="index.php?action=addwiki">
+    <form method="post" action="?action=addWiki">
         <div class="mb-3">
             <label for="title" class="form-label">Title:</label>
             <input type="text" class="form-control" name="title" required>
@@ -52,7 +51,7 @@
                 <div class="mb-3">
             <label for="tags" class="form-label">Select Tags (Select more than 3):</label>
             <select class="form-control" name="tags[]" multiple required>
-                <!-- Display fetched tags dynamically -->
+                <!-- Display fetched tags  -->
                 <?php foreach ($tags as $tag) : ?>
                     <option value="<?php echo $tag['id']; ?>"><?php echo $tag['name']; ?></option>
                 <?php endforeach; ?>
@@ -60,13 +59,13 @@
         </div>
         
         
-        <input type="hidden" name="authorID" value="1"> <!-- Replace with actual user ID -->
+        <input type="hidden" name="authorID" value="1"> 
 
         <button type="submit" class="btn btn-primary">Add Wiki</button>
     </form>
 </div>
 
-<!-- Bootstrap JS and dependencies -->
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>

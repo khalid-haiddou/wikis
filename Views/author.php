@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="author.php">
+                    <a href="http://localhost:8000/?action=showwikis">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -38,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost:8000/?action=addwikipage">
+                    <a href="?action=addwikipage">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -46,14 +46,7 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Tags</span>
-                    </a>
-                </li>
+                
 
                 <li>
                     <a href="http://localhost:8000/?action=showwikis">
@@ -74,7 +67,7 @@
                 </li>
 
                 <li>
-                    <a href="../public/index.php?action=logout">
+                <a href="?action=logout">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>

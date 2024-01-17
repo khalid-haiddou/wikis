@@ -51,6 +51,33 @@ class TagModel {
         return $stmt->rowCount(); // Number of affected rows
     }
     
+    public function statistics() {
+        $conn = $this->db->getConnection();
     
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM `wiki`;");
+        $stmt->execute();
+    
+        // You might want to handle success or failure here
+        return $stmt->fetchColumn(); // Number of affected rows
+    }
+    public function statisticstag() {
+        $conn = $this->db->getConnection();
+    
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM `tags`;");
+        $stmt->execute();
+    
+        // You might want to handle success or failure here
+        return $stmt->fetchColumn(); // Number of affected rows
+    }
+    public function statisticscategory() {
+        $conn = $this->db->getConnection();
+    
+        $stmt = $conn->prepare("SELECT COUNT(*) FROM `categories`;");
+        $stmt->execute();
+    
+        // You might want to handle success or failure here
+        return $stmt->fetchColumn(); // Number of affected rows
+    }
+   
 }
 ?>

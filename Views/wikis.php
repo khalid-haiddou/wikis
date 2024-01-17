@@ -51,7 +51,7 @@
 
 <div class="container">
     <h1 class="mt-4 mb-4">Wikis</h1>
-
+    <a href="?action=addwikipage" class="blue-button">ADD NEW</a>
     <table class="table">
         <thead>
             <tr>

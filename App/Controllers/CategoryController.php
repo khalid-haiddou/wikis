@@ -15,20 +15,18 @@ class CategoryController {
             $result = $this->categoryModel->addCategory($name);
 
             if ($result > 0) {
-                // Category added successfully, redirect to dashboard
-                header("Location: ../Views/dashboard.php");
+                header("Location: ?action=addCategory");
                 exit();
             } else {
-                // Handle failure, display an error message or redirect to an error page
                 echo "Failed to add the category.";
             }
         }
 
-        // Load the view for adding a new category
-        include '../../views/add_category.php';
+    
+        include '../views/add_category.php';
     }
     public function showCategories() {
-        // Retrieve all categories
+        
         $categories = $this->categoryModel->getAllCategories();
 
         include '../views/categories.php';

@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="../Views/dashboard.php">
+                    <a href="?action=statistics">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -37,14 +37,6 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">authors</span>
-                    </a>
-                </li>
 
                 <li>
                     <a href="http://localhost/WIKIS/public/index.php?action=showTags">

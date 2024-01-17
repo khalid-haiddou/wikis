@@ -28,17 +28,12 @@ class TagController {
     
 
     public function showTags() {
-        // Retrieve all tags from the model
         $tags = $this->tagModel->getAllTags();
 
-        // Load the view to display tags
         include '../views/show_tags.php';
     }
     public function showUpdateTagForm($tagId) {
-        // Retrieve tag details by ID
         $tag = $this->tagModel->getTagById($tagId);
-
-        // Load the view for updating tags
         include '../views/update_tag.php';
     }
 
@@ -57,23 +52,27 @@ class TagController {
     }
 
     public function deleteTag($tagId) {
-    // Check if the tagId is provided
     if ($tagId !== null) {
-        // Delete the tag by ID
         $result = $this->tagModel->deleteTag($tagId);
 
         if ($result > 0) {
-            // Tag deleted successfully
             header("Location: ../public/index.php?action=showTags");
             exit();
         } else {
-            // Handle failure, display an error message or redirect to an error page
             echo "Failed to delete the tag.";
         }
     } else {
-        // Handle the case when tagId is not provided
         echo "Tag ID is missing";
     }
+}
+    public function statistics() {
+        // echo 'work';
+        // die();
+        $result = $this->tagModel->statistics();
+        $tag = $this->tagModel->statisticstag();
+        $category = $this->tagModel->statisticscategory();
+
+ require("../Views/dashboard.php");
 }
     
 }

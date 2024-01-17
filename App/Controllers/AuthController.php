@@ -49,10 +49,10 @@ class AuthController {
 
                 // Redirect based on the user's role
                 if ($user['Role'] == 'admin') {
-                    header("Location: ../../Views/dashboard.php");
+                    header("Location: ?action=statistics");
                     exit();
                 } elseif ($user['Role'] == 'author') {
-                    header("Location: ../Views/author.php");
+                    header("Location: ?action=author");
                     exit();
                 } else {
                     // Handle other roles or provide a default redirection
@@ -74,7 +74,7 @@ class AuthController {
         session_destroy();
 
         // Redirect to the login page after logout
-        header("Location: index.php?action=login");
+        header("Location: ?action=login");
         exit();
     }
 }

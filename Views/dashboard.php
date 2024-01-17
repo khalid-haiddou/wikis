@@ -29,20 +29,11 @@
                 </li>
 
                 <li>
-                    <a href="dashboard.php">
+                    <a href="?action=statistics">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
                         <span class="title">Dashboard</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">authors</span>
                     </a>
                 </li>
 
@@ -65,7 +56,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                <a href="http://localhost:8000/?action=showwikis">
                         <span class="icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
@@ -74,7 +65,7 @@
                 </li>
 
                 <li>
-                    <a href="../public/index.php?action=logout">
+                    <a href="?action=logout">
                         <span class="icon">
                             <ion-icon name="log-out-outline"></ion-icon>
                         </span>
@@ -114,16 +105,16 @@
         <div class="col-lg-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-users"></i> Admins</h5>
-              <p class="card-text">1</p>
+              <h5 class="card-title"><i class="fas fa-users"></i> WIKIS</h5>
+              <p class="card-text"><?php echo $result?></p>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-chart-line"></i> Total Authors </h5>
-              <p class="card-text">10</p>
+              <h5 class="card-title"><i class="fas fa-chart-line"></i> TAGS </h5>
+              <p class="card-text"><?php echo $tag?></p>
             </div>
           </div>
         </div>
@@ -131,34 +122,11 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-eye"></i> Total Categories </h5>
-              <p class="card-text">10</p>
+              <p class="card-text"><?php echo $category?></p>
             </div>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-shopping-cart"></i> Total Posts </h5>
-              <p class="card-text">3</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-chart-bar"></i> Total Users </h5>
-              <p class="card-text">5</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><i class="fas fa-comments"></i> Total TAgs </h5>
-              <p class="card-text">10</p>
-            </div>
-          </div>
-        </div>
+      
       </div>
 
     </main>

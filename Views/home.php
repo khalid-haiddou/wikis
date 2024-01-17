@@ -68,8 +68,8 @@
             </ul>
           </li>
 
-          <li><a href="login.php">Login</a></li>
-          <li><a href="register.php">Register</a></li>
+          <li><a href="?action=login">Login</a></li>
+          <li><a href="?action=register">Register</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -79,11 +79,10 @@
 
         <!-- ======= Search Form ======= -->
         <div class="search-form-wrap js-search-form-wrap">
-          <form action="search-result.html" class="search-form">
             <span class="icon bi-search"></span>
-            <input type="text" placeholder="Search" class="form-control">
+            <input type="text" id="textSearch" placeholder="Search" class="form-control">
+            <button onclick="search()">search</button>
             <button class="btn js-search-close"><span class="bi-x"></span></button>
-          </form>
         </div><!-- End Search Form -->
 
       </div>
@@ -150,16 +149,12 @@
         </div>
       </div>
     </section><!-- End Hero Slider Section -->
-
-
-
-
-
     <!-- ======= Post Grid Section ======= -->
-    <section id="posts" class="posts">
+    <section id="posts" class="posts" >
+      <div id="Mydiv">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-<?php foreach($getwikis as $wiki){ ?>
+        <?php foreach($getwikis as $wiki){ ?>
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
               <a href="single-post.html"><img src="../assets/assets1/img/khalidsc.webp" alt="" class="img-fluid"></a>
@@ -183,6 +178,7 @@
             </div>
           </div>
         </div> <!-- End .row -->
+      </div>
       </div>
     </section> <!-- End Post Grid Section -->
 
@@ -348,7 +344,25 @@
 
   <!-- Template Main JS File -->
   <script src="../assets/assets1/js/main.js"></script>
+  <!-- <script>
+        function search() {
+            var inp = document.getElementById('inp').value;
 
+console.log(inp);
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', '?route=showWikis&inp=' + inp, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // console.log(xhr.responseText);
+                    document.getElementById('dev').innerHTML = xhr.responseText;
+                }
+            };
+            xhr.send();
+        }
+        search();
+    </script> -->
+
+    <script src="assets/js/search.js"></script>
 </body>
 
 </html>

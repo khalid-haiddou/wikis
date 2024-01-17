@@ -19,6 +19,13 @@ $homeController = new homeController();
 switch ($action) {
     case 'home':
         $homeController->home();
+        
+        break;
+    case 'author':
+        $homeController->author();
+        break;
+    case 'dashboard':
+        $homeController->dashboard();
         break;
     case 'register':
         $authController->register();
@@ -62,11 +69,24 @@ switch ($action) {
     case 'deleteTag':
         $tagController->deleteTag($_GET['tagId']);
         break;   
-    case 'addwiki':
-        $wikiController->addwiki();
+    case 'addWiki':
+        $wikiController->getaddpage();
+        $wikiController->addWiki();
         break;  
+    case 'search_page':
+        isset($_GET['text']);
+        $text = $_GET['text'];
+        $wikiController->getSearch($text);
+
+        break;
     case 'showwikis':
+        // echo'bbb';
+        // die();
         $wikiController->showWikis();
+        break;                                                                                                                                     
+    case 'statistics':
+       
+        $tagController->statistics();
         break;                                                                                                                                     
     default:
         echo "Invalid action";
